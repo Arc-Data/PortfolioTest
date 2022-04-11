@@ -1,0 +1,309 @@
+:root {
+	--site-background-theme : #15141f;
+	--site-subground-theme 	: #d5d0f7;
+	font-size: 16px;
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+	background: cyan;
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--site-background-theme);
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+h1,
+h3 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+#header {
+	background: url("https://cdn.discordapp.com/attachments/849196983058038804/961509512936849408/740377.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 220px;
+	max-width: 100%;
+	border-bottom: 2px solid cyan;
+}
+
+#header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.4);
+	z-index: 2;
+}
+
+
+#nav-bar {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 60px;
+	padding: 0px 5px;
+	background: var(--site-subground-theme);
+	z-index: 3;
+	display: flex;
+	text-align: center;
+}
+
+
+.nav-link {
+	padding: 10px 5px;
+	line-height: 2;
+	height: 100%;
+	width: 80px;
+}
+
+
+.page-content {
+	max-width: 1000px;
+	padding: 80px 0px;
+	font-size: 1.2rem;
+
+	margin: 0 auto;
+	display: grid;
+	display: flex;
+	flex-direction: column;
+	
+
+}
+
+.main-content{
+	height: auto;
+	margin: 0 auto;
+	width: 1000px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.heading-text {
+	color: cyan;
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.intro-description {
+	display: grid;
+	/*width: 100%;*/
+	grid-template-columns: 600px 1fr;
+	margin-top: 80px;
+	line-height: 3.2;
+	text-indent: 40px;
+	text-align: justify;
+}
+
+.subtitle {
+	font-size: 1rem;
+}
+
+.reasons-section {
+	grid-area : reasonss-header;
+	text-align: center;
+	margin-top: 220px;
+}
+
+.reasons-grid {
+	margin: 150px 0 80px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+
+.reasons-card {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	text-indent: 20px;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+footer {
+	padding: 20px;
+	background: var(--site-subground-theme);
+}
+
+.text-title {
+	text-align: center;
+}
+
+
+.skills-main {
+	margin-top: 80px;
+	text-indent: 40px;
+	line-height: 2;
+}
+
+.skills-main div {
+	margin: 20px;
+}
+
+.relevant-section {
+	text-align: center;
+	margin-top: 150px;
+}
+
+
+.skill-grid {
+	margin: 80px 0px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 200px;
+	font-size: .9em ;
+	line-height: 2;
+	text-align: center;
+	
+}
+
+.skill-grid > div{
+	padding: 20px;
+
+}
+
+.skill-overall {
+	text-indent: 40px;
+	grid-row: 1/3;
+	grid-column: 1/3;
+	padding: 80px;
+	display: flex;
+	place-items: center;
+	text-align: justify;
+}
+
+/*.main-content {
+	background: #1d1d1d;
+	
+}
+
+.main-heading-content {
+	font-size: 1.8em;
+	letter-spacing: 2px;
+	color: cyan;
+	padding: 20px 0px 5px 20px;
+	margin-bottom: 15px;
+}
+
+.main-intro-content {
+	display: grid;
+	grid-template-columns: auto 300px;
+	min-height: 400px;
+
+	text-indent: 30px;
+	text-align: justify;
+}
+
+.main-panel-1 {
+	color: white;
+	padding: 20px 40px;
+	line-height: 2;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
+
+
+
+.reasonss-section {
+	margin: 300px auto;
+	padding:10px 20px;
+	width: 80%;
+
+
+}
+
+.section-title {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: cyan;
+	margin: 0;
+}
+
+.section-title h3 {
+	text-transform: uppercase;
+
+}
+
+.sub-title {
+	color: white;
+	font-size: .8em;
+
+}
+
+.reasons-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+}
+
+.reasons-grid > div{
+	text-align: center;
+}
+
+.reasons-card {
+	display: grid;
+	grid-template-rows: 160px auto;
+}
+
+.reasons-card-header {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.reasons-desc {
+	text-indent: 40px;
+	line-height: 2;
+	text-align: justify;
+	padding: 20px;
+}
+
+@media(max-width: 1000px) {
+	#nav-bar {
+		width: 100%;
+	}
+
+	.main-content {
+		margin-left: 0px;
+		box-shadow: none;
+		font-size: .6em;
+	}
+
+	.reasons-grid {
+		display: flex;
+		flex-direction: column;
+		
+	}
+}*/
